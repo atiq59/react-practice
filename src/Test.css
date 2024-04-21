@@ -1,0 +1,18 @@
+* {
+    background-color: #9fd6ce;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.heading {
+    padding: 30px;
+    background-color: pink;
+    border-radius: 20px;
+    color: #fa9191;
+}
