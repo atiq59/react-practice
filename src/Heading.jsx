@@ -1,15 +1,12 @@
 import React from "react";
 import '././App.css';
 
-function Heading() {
+function Heading(props) {
 
-	const name = {
-		fName: 'Atiq',
-		lName: 'Shahab'
-	}
+	console.log(props);
 
 	return (
-		<h1 className="heading">My name is {name.fName} {name.lName}</h1>
+		<h1 className="heading">My name is {props.fName} {props.lName}</h1>
 	)
 }
 
