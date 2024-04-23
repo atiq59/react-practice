@@ -1,23 +1,21 @@
 import './App.css';
-import data from './common/data';
-import Card from './components/card';
+import Data from './common/Data';
+import Card from './components/Card';
 
 function App() {
 
 	return (
 		<>
 			<div className='main'>
-				{data.map((val, i) => {
+				{Data.map(val => {
 					return (
-						<>
-							<Card
-								key={i}
-								name={val.name}
-								designation={val.designation}
-								experience={val.experience}
-								employeeId={val.employeeId}
-							/>
-						</>
+						<Card 
+							key={val.employeeId}
+							name={val.name}
+							designation={val.designation}
+							experience={val.experience}
+							employeeId={val.employeeId}
+						/>
 					)
 				})}
 			</div>

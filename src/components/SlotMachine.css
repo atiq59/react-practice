@@ -1,0 +1,12 @@
+
+
+.box {
+    text-align: center;
+    background-color: #616161;
+    width: 250px;
+    padding: 15px 10px;
+    margin: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    border-bottom: 5px solid #fff;
+}
