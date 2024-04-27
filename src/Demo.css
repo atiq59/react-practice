@@ -7,13 +7,6 @@
     align-items: center;
 }
 
-.card {
-    background-color: #fff;
-    width: 250px;
-    height: 300px;
-    border-radius: 10px;
-}
-
 .heading {
     text-align: center;
     font-size: 25px;
@@ -22,8 +15,6 @@
     padding: 5px;
     color: #ffff;
     margin-top: 0px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 }
 
 input {
@@ -32,29 +23,10 @@ input {
     padding: 5px;
 }
 
-.plus {
-    background-color: #0000ff;
-    border-radius: 100%;
-    border: none;
-    width: 25px;
-    height: 25px;
-    color: #fff;
-    cursor: pointer;
+.MuiCardContent-root	 {
+    padding: 0 !important;
 }
 
-.minus {
-    background-color: #ff0000;
-    border-radius: 100%;
-    border: none;
-    width: 22px;
-    height: 22px;
-    color: #fff;
-    cursor: pointer;
-}
-
-.plus:hover {
-    background-color: #008000;
-}
 
 ol {
     padding-left: 20px;

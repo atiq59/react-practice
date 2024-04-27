@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import './HooksTest.css';
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
+import IconButton from '@mui/material/IconButton';
 
 
 const Hooks = () => {
@@ -49,20 +52,18 @@ const Hooks = () => {
             <div style={{fontWeight: fontValue}}>{updatedDate}</div>
             <button className='time' onClick={GetUpdatedTime}>Get Time</button>
             <div className='box'>
-                <button onClick={() => IncreaseNum('minus')} disabled={count === 0}>-</button>
+                <IconButton color='error' aria-label="delete" onClick={() => IncreaseNum('minus')} disabled={count === 0}><RemoveIcon /></IconButton>                
                 <h1 style={ myStyle }>{count}</h1>
-                <button onClick={() => IncreaseNum()}>+</button>
+                <IconButton color='primary' aria-label="delete" onClick={() => IncreaseNum()}><AddIcon /></IconButton>                
             </div>
 
             <form onSubmit={submit}>
                 <h2>Hello, {`${formData.fName} ${formData.lName}`}</h2>
                 <p>{formData.email}</p>
                 <input type='text' placeholder='Enter your first name' name='fName' 
-                // value={formData.fName} 
                 onChange={setInputValue} />
                 <br />
                 <input type='text' placeholder='Enter your last name' name='lName' 
-                // value={formData.lName} 
                 onChange={setInputValue} />
                 <br />
                 <input type='email' placeholder='Enter your email' name='email' 

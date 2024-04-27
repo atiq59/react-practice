@@ -1,6 +1,12 @@
 import { useState } from 'react';
 import './Demo.css';
 import ToDoList from './components/ToDoList';
+import Card from '@mui/material/Card';
+import { CardContent } from '@mui/material';
+import TextField from '@mui/material/TextField';
+import AddIcon from '@mui/icons-material/Add';
+import IconButton from '@mui/material/IconButton';
+import Grid from '@mui/material/Grid';
 
 function Demo() {
 
@@ -24,13 +30,30 @@ function Demo() {
 
     return (
         <>
-            <div className="mainDiv">
-                <div className="card">
-                    <p className='heading'>ToDo List</p>
-                    <input type='text' placeholder='Add Item' value={inputModel} onChange={onTypeInput} />
-                    <button className='plus' onClick={addList}>+</button>
+            <div className='mainDiv'>
 
-                    <ol>
+                <Card sx={{ minWidth: 275, minHeight: 375 }}>
+
+                    <CardContent>
+                        <p className='heading'>ToDo List</p>
+
+                        <Grid
+                            container
+                            direction="row"
+                            justifyContent="center"
+                            alignItems="center"
+                            spacing={2}
+                        >
+                            <Grid item xs={8}>
+                                <TextField id="standard-basic" label="Add Item" variant="standard" size='small' value={inputModel} onChange={onTypeInput} />
+                            </Grid>
+
+                            <Grid item xs={2}>
+                                <IconButton color='primary' aria-label="add" onClick={() => addList()}><AddIcon /></IconButton>
+                            </Grid>
+                        </Grid>
+
+                        <ol>
                         {
                             listOfInput.map((val, index) => {
                                 return (
@@ -45,7 +68,10 @@ function Demo() {
                             })
                         }
                     </ol>
-                </div>
+
+                    </CardContent>
+                    
+                </Card>
             </div>
         </>
     )
