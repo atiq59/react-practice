@@ -1,8 +1,10 @@
-import { BtnName } from '.';
+import { createContext } from 'react';
 import './App.css';
 import Demo from './Demo';
 // import Data from './common/Data';
 // import Card from './components/Card';
+
+const BtnName = createContext();
 
 function App() {
 
@@ -29,3 +31,4 @@ function App() {
 }
 
 export default App;
+export { BtnName };

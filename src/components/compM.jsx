@@ -1,20 +1,17 @@
 import { Button } from '@mui/material';
-import React from "react";
-import { BtnName } from '../index';
+import React, { useContext } from "react";
+import { BtnName } from '../App';
 
 function CompM() {
+
+    const {first, second} = useContext(BtnName);
+    
     function redirectToMUI() {
         window.open('https://mui.com/material-ui/all-components/');
     }
     return(
         <>
-            <BtnName.Consumer>
-                {
-                    ({first, second}) => {
-                    return <Button size="small" onClick={redirectToMUI}>{`${first} ${second}`}</Button>
-                    }
-                }
-            </BtnName.Consumer>
+            <Button size="small" onClick={redirectToMUI}>{`${first} ${second}`}</Button>
         </>
     );
 }
