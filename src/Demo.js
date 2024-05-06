@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import './Demo.css';
 import ToDoList from './components/ToDoList';
-import Card from '@mui/material/Card';
-import { CardContent } from '@mui/material';
-import TextField from '@mui/material/TextField';
+import CompM from './components/compM';
+
+import { Card, CardContent, CardActions, TextField, IconButton, Grid, Tooltip } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
-import IconButton from '@mui/material/IconButton';
-import Grid from '@mui/material/Grid';
+
 
 function Demo() {
 
@@ -49,7 +48,9 @@ function Demo() {
                             </Grid>
 
                             <Grid item xs={2}>
+                            <Tooltip title="Add">
                                 <IconButton color='primary' aria-label="add" onClick={() => addList()}><AddIcon /></IconButton>
+                            </Tooltip>
                             </Grid>
                         </Grid>
 
@@ -70,6 +71,10 @@ function Demo() {
                     </ol>
 
                     </CardContent>
+
+                    <CardActions>
+                        <CompM />
+                    </CardActions>
                     
                 </Card>
             </div>

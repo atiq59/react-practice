@@ -1,12 +1,14 @@
+import { BtnName } from '.';
 import './App.css';
-import Data from './common/Data';
-import Card from './components/Card';
+import Demo from './Demo';
+// import Data from './common/Data';
+// import Card from './components/Card';
 
 function App() {
 
 	return (
 		<>
-			<div className='main'>
+			{/* <div className='main'>
 				{Data.map(val => {
 					return (
 						<Card 
@@ -18,7 +20,10 @@ function App() {
 						/>
 					)
 				})}
-			</div>
+			</div> */}
+			<BtnName.Provider value={{first: 'Learn', second: 'More'}}>
+				<Demo />
+			</BtnName.Provider>
 		</>
 	);
 }
