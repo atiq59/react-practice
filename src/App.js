@@ -1,8 +1,15 @@
 import { createContext } from 'react';
 import './App.css';
 import Demo from './Demo';
-// import Data from './common/Data';
-// import Card from './components/Card';
+import Greeting from './Greeting';
+import Test from './Test';
+import {
+	BrowserRouter,
+	Route,
+	Routes,
+} from "react-router-dom";
+import ErrorPage from './components/ErrorPage';
+import Navbar from './components/Navbar';
 
 const BtnName = createContext();
 
@@ -10,24 +17,23 @@ function App() {
 
 	return (
 		<>
-			{/* <div className='main'>
-				{Data.map(val => {
-					return (
-						<Card 
-							key={val.employeeId}
-							name={val.name}
-							designation={val.designation}
-							experience={val.experience}
-							employeeId={val.employeeId}
-						/>
-					)
-				})}
-			</div> */}
-			<BtnName.Provider value={{first: 'Learn', second: 'More'}}>
-				<Demo />
-			</BtnName.Provider>
+			<BrowserRouter>
+				<Navbar />
+				<Routes>
+					<Route path='/' element={
+						<BtnName.Provider value={{ first: 'Learn', second: 'More' }}>
+							<Demo />
+						</BtnName.Provider>
+					} />
+
+					<Route path='greeting' element={<Greeting />} />
+
+					<Route path='test' element={<Test />} />
+					<Route path='*' element={<ErrorPage />} />
+				</Routes>
+			</BrowserRouter>
 		</>
-	);
+	)
 }
 
 export default App;

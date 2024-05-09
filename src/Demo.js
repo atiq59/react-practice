@@ -48,34 +48,34 @@ function Demo() {
                             </Grid>
 
                             <Grid item xs={2}>
-                            <Tooltip title="Add">
-                                <IconButton color='primary' aria-label="add" onClick={() => addList()}><AddIcon /></IconButton>
-                            </Tooltip>
+                                <Tooltip title="Add">
+                                    <IconButton color='primary' aria-label="add" onClick={() => addList()}><AddIcon /></IconButton>
+                                </Tooltip>
                             </Grid>
                         </Grid>
 
                         <ol>
-                        {
-                            listOfInput.map((val, index) => {
-                                return (
-                                
-                                    <ToDoList 
-                                        key={index}
-                                        value={val}
-                                        onSelect={deleteList}
+                            {
+                                listOfInput.map((val, index) => {
+                                    return (
 
-                                    />
-                                )
-                            })
-                        }
-                    </ol>
+                                        <ToDoList
+                                            key={index}
+                                            value={val}
+                                            onSelect={deleteList}
+
+                                        />
+                                    )
+                                })
+                            }
+                        </ol>
 
                     </CardContent>
 
                     <CardActions>
                         <CompM />
                     </CardActions>
-                    
+
                 </Card>
             </div>
         </>
