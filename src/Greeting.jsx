@@ -5,7 +5,7 @@ function Greeting() {
     let greeting = '';
     const cssStyle = {
         color: '',
-        backgroundColor: 'pink'
+        backgroundColor: 'pinkk'
     }
 
     const date = new Date(),

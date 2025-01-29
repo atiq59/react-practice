@@ -34,7 +34,7 @@ function Demo() {
                 <Card sx={{ minWidth: 275, minHeight: 375 }}>
 
                     <CardContent>
-                        <p className='heading'>ToDo List</p>
+                        <p className='heading cls'>ToDo List</p>
 
                         <Grid
                             container
